@@ -1,0 +1,264 @@
+:root {
+    --header-1-font-family: "Encode Sans", Helvetica;
+    --header-1-font-weight: 700;
+    --header-1-font-size: 64px;
+    --header-1-letter-spacing: 0px;
+    --header-1-line-height: normal;
+    --header-1-font-style: normal;
+    --header-2-font-family: "Encode Sans", Helvetica;
+    --header-2-font-weight: 700;
+    --header-2-font-size: 40px;
+    --header-2-letter-spacing: 0px;
+    --header-2-line-height: normal;
+    --header-2-font-style: normal;
+    --header-3-font-family: "Encode Sans", Helvetica;
+    --header-3-font-weight: 700;
+    --header-3-font-size: 28px;
+    --header-3-letter-spacing: 0px;
+    --header-3-line-height: normal;
+    --header-3-font-style: normal;
+    --header-4-font-family: "Encode Sans", Helvetica;
+    --header-4-font-weight: 700;
+    --header-4-font-size: 24px;
+    --header-4-letter-spacing: 0px;
+    --header-4-line-height: normal;
+    --header-4-font-style: normal;
+    --text-1-font-family: "Open Sans", Helvetica;
+    --text-1-font-weight: 400;
+    --text-1-font-size: 18px;
+    --text-1-letter-spacing: 0px;
+    --text-1-line-height: normal;
+    --text-1-font-style: normal;
+    --text-2-font-family: "Open Sans", Helvetica;
+    --text-2-font-weight: 400;
+    --text-2-font-size: 16px;
+    --text-2-letter-spacing: 0px;
+    --text-2-line-height: normal;
+    --text-2-font-style: normal;
+    --text-3-font-family: "Open Sans", Helvetica;
+    --text-3-font-weight: 400;
+    --text-3-font-size: 12px;
+    --text-3-letter-spacing: 0px;
+    --text-3-line-height: normal;
+    --text-3-font-style: normal;
+    --bottom-nav-font-family: "Open Sans", Helvetica;
+    --bottom-nav-font-weight: 400;
+    --bottom-nav-font-size: 10px;
+    --bottom-nav-letter-spacing: 0px;
+    --bottom-nav-line-height: normal;
+    --bottom-nav-font-style: normal;
+    --text-2-semibold-inputs-font-family: "Open Sans", Helvetica;
+    --text-2-semibold-inputs-font-weight: 600;
+    --text-2-semibold-inputs-font-size: 16px;
+    --text-2-semibold-inputs-letter-spacing: 0px;
+    --text-2-semibold-inputs-line-height: normal;
+    --text-2-semibold-inputs-font-style: normal;
+    --dropshadow-mini: 0px 0px 8px 2px rgba(0, 0, 0, 0.08);
+    --colors-purple-purple-1: rgba(75, 46, 131, 1);
+    --colors-purple-purple-2: rgba(228, 226, 240, 1);
+    --colors-purple-lavendar: rgba(197, 180, 227, 1);
+    --colors-black-black-1: rgba(17, 17, 17, 1);
+    --colors-blue-blue: rgba(0, 70, 173, 1);
+    --colors-blue-blue-2: rgba(99, 177, 229, 1);
+    --colors-blue-blue-3: rgba(22, 87, 136, 1);
+    --colors-blue-blue-4: rgba(147, 177, 204, 1);
+    --colors-black-black-4: rgba(147, 149, 152, 1);
+    --colors-green-green: rgba(196, 255, 205, 1);
+    --colors-green-green-2: rgba(3, 138, 23, 1);
+    --colors-red-red-1: rgba(255, 203, 203, 1);
+    --colors-white-white: rgba(255, 255, 255, 1);
+    --colors-red-red-2: rgba(213, 19, 19, 1);
+    --colors-yellow-yellow-1: rgba(255, 239, 180, 1);
+    --colors-yellow-yellow-2: rgba(224, 176, 7, 1);
+    --colors-brown-1: rgba(142, 99, 42, 1);
+    --colors-brown-2: rgba(215, 200, 150, 1);
+    --colors-brown-3: rgba(237, 232, 196, 1);
+    --colors-brown-4: rgba(219, 206, 172, 1);
+    --prototype-show-toast: initial;
+    --prototype-of-passengers: 1px;
+    --prototype-person-1: initial;
+    --prototype-person-2: none;
+    --prototype-person-3: none;
+    --prototype-person-4: none;
+    --prototype-opacity-inactive: 30px;
+    --prototype-opacity-active: 100px;
+    --prototype-opacity: var(--prototype-opacity-active);
+    --UI-button-primary-background: var(--colors-purple-purple-1);
+    --UI-button-primary-foreground: var(--colors-white-white);
+    --UI-button-secondary-background: var(--colors-white-white);
+    --UI-button-secondary-stroke: var(--colors-purple-purple-1);
+    --UI-button-secondary-foreground: var(--colors-purple-purple-1);
+    --UI-button-tertiary-background: var(--colors-white-white);
+    --UI-button-tertiary-foreground: var(--colors-purple-purple-1);
+    --color-system-background-BG: var(--colors-white-white);
+    --color-system-foreground-text: var(--colors-white-white);
+    --color-system: var(--color-system-inactive);
+    --color-system-inactive: var(--colors-purple-lavendar);
+    --color-system-active: var(--colors-purple-purple-1);
+    --color-system-animationplayed: none;
+    --color-system-frame1animationplayed: none;
+    --color-system-frame2animationplayed: none;
+    --color-system-frame3animationplayed: none;
+    --color-system-frame4animationplayed: none;
+}
+
+/*
+
+To enable a theme in your HTML, simply add one of the following data attributes to an HTML element, like so:
+
+<body data-color-system-mode="light-mode">
+        <!-- the rest of your content -->
+</body>
+
+You can apply the theme on any DOM node, not just the `body`
+
+*/
+
+[data-color-system-mode="light-mode"] {
+    --color-system-background-BG: var(--colors-white-white);
+    --color-system-foreground-text: var(--colors-white-white);
+    --color-system: var(--color-system-inactive);
+    --color-system-inactive: var(--colors-purple-lavendar);
+    --color-system-active: var(--colors-purple-purple-1);
+}
+
+[data-color-system-mode="darkmode"] {
+    --color-system-background-BG: var(--colors-black-black-1);
+    --color-system-foreground-text: var(--colors-black-black-1);
+    --color-system: rgba(255, 255, 255, 1);
+    --color-system-inactive: rgba(255, 255, 255, 1);
+    --color-system-active: rgba(255, 255, 255, 1);
+}
+
+
+:root {
+    --header-1-font-family: "Encode Sans", Helvetica;
+    --header-1-font-weight: 700;
+    --header-1-font-size: 64px;
+    --header-1-letter-spacing: 0px;
+    --header-1-line-height: normal;
+    --header-1-font-style: normal;
+    --header-2-font-family: "Encode Sans", Helvetica;
+    --header-2-font-weight: 700;
+    --header-2-font-size: 40px;
+    --header-2-letter-spacing: 0px;
+    --header-2-line-height: normal;
+    --header-2-font-style: normal;
+    --header-3-font-family: "Encode Sans", Helvetica;
+    --header-3-font-weight: 700;
+    --header-3-font-size: 28px;
+    --header-3-letter-spacing: 0px;
+    --header-3-line-height: normal;
+    --header-3-font-style: normal;
+    --header-4-font-family: "Encode Sans", Helvetica;
+    --header-4-font-weight: 700;
+    --header-4-font-size: 24px;
+    --header-4-letter-spacing: 0px;
+    --header-4-line-height: normal;
+    --header-4-font-style: normal;
+    --text-1-font-family: "Open Sans", Helvetica;
+    --text-1-font-weight: 400;
+    --text-1-font-size: 18px;
+    --text-1-letter-spacing: 0px;
+    --text-1-line-height: normal;
+    --text-1-font-style: normal;
+    --text-2-font-family: "Open Sans", Helvetica;
+    --text-2-font-weight: 400;
+    --text-2-font-size: 16px;
+    --text-2-letter-spacing: 0px;
+    --text-2-line-height: normal;
+    --text-2-font-style: normal;
+    --text-3-font-family: "Open Sans", Helvetica;
+    --text-3-font-weight: 400;
+    --text-3-font-size: 12px;
+    --text-3-letter-spacing: 0px;
+    --text-3-line-height: normal;
+    --text-3-font-style: normal;
+    --bottom-nav-font-family: "Open Sans", Helvetica;
+    --bottom-nav-font-weight: 400;
+    --bottom-nav-font-size: 10px;
+    --bottom-nav-letter-spacing: 0px;
+    --bottom-nav-line-height: normal;
+    --bottom-nav-font-style: normal;
+    --text-2-semibold-inputs-font-family: "Open Sans", Helvetica;
+    --text-2-semibold-inputs-font-weight: 600;
+    --text-2-semibold-inputs-font-size: 16px;
+    --text-2-semibold-inputs-letter-spacing: 0px;
+    --text-2-semibold-inputs-line-height: normal;
+    --text-2-semibold-inputs-font-style: normal;
+    --dropshadow-mini: 0px 0px 8px 2px rgba(0, 0, 0, 0.08);
+    --colors-purple-purple-1: rgba(75, 46, 131, 1);
+    --colors-purple-purple-2: rgba(228, 226, 240, 1);
+    --colors-purple-lavendar: rgba(197, 180, 227, 1);
+    --colors-black-black-1: rgba(17, 17, 17, 1);
+    --colors-blue-blue: rgba(0, 70, 173, 1);
+    --colors-blue-blue-2: rgba(99, 177, 229, 1);
+    --colors-blue-blue-3: rgba(22, 87, 136, 1);
+    --colors-blue-blue-4: rgba(147, 177, 204, 1);
+    --colors-black-black-4: rgba(147, 149, 152, 1);
+    --colors-green-green: rgba(196, 255, 205, 1);
+    --colors-green-green-2: rgba(3, 138, 23, 1);
+    --colors-red-red-1: rgba(255, 203, 203, 1);
+    --colors-white-white: rgba(255, 255, 255, 1);
+    --colors-red-red-2: rgba(213, 19, 19, 1);
+    --colors-yellow-yellow-1: rgba(255, 239, 180, 1);
+    --colors-yellow-yellow-2: rgba(224, 176, 7, 1);
+    --colors-brown-1: rgba(142, 99, 42, 1);
+    --colors-brown-2: rgba(215, 200, 150, 1);
+    --colors-brown-3: rgba(237, 232, 196, 1);
+    --colors-brown-4: rgba(219, 206, 172, 1);
+    --prototype-show-toast: initial;
+    --prototype-of-passengers: 1px;
+    --prototype-person-1: initial;
+    --prototype-person-2: none;
+    --prototype-person-3: none;
+    --prototype-person-4: none;
+    --prototype-opacity-inactive: 30px;
+    --prototype-opacity-active: 100px;
+    --prototype-opacity: var(--prototype-opacity-active);
+    --UI-button-primary-background: var(--colors-purple-purple-1);
+    --UI-button-primary-foreground: var(--colors-white-white);
+    --UI-button-secondary-background: var(--colors-white-white);
+    --UI-button-secondary-stroke: var(--colors-purple-purple-1);
+    --UI-button-secondary-foreground: var(--colors-purple-purple-1);
+    --UI-button-tertiary-background: var(--colors-white-white);
+    --UI-button-tertiary-foreground: var(--colors-purple-purple-1);
+    --color-system-background-BG: var(--colors-white-white);
+    --color-system-foreground-text: var(--colors-white-white);
+    --color-system: var(--color-system-inactive);
+    --color-system-inactive: var(--colors-purple-lavendar);
+    --color-system-active: var(--colors-purple-purple-1);
+    --color-system-animationplayed: none;
+    --color-system-frame1animationplayed: none;
+    --color-system-frame2animationplayed: none;
+    --color-system-frame3animationplayed: none;
+    --color-system-frame4animationplayed: none;
+}
+
+/*
+
+To enable a theme in your HTML, simply add one of the following data attributes to an HTML element, like so:
+
+<body data-color-system-mode="light-mode">
+        <!-- the rest of your content -->
+</body>
+
+You can apply the theme on any DOM node, not just the `body`
+
+*/
+
+[data-color-system-mode="light-mode"] {
+    --color-system-background-BG: var(--colors-white-white);
+    --color-system-foreground-text: var(--colors-white-white);
+    --color-system: var(--color-system-inactive);
+    --color-system-inactive: var(--colors-purple-lavendar);
+    --color-system-active: var(--colors-purple-purple-1);
+}
+
+[data-color-system-mode="darkmode"] {
+    --color-system-background-BG: var(--colors-black-black-1);
+    --color-system-foreground-text: var(--colors-black-black-1);
+    --color-system: rgba(255, 255, 255, 1);
+    --color-system-inactive: rgba(255, 255, 255, 1);
+    --color-system-active: rgba(255, 255, 255, 1);
+}

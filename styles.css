@@ -1,0 +1,121 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+
+#navbar {
+    background-color: #4B2E83; 
+    padding: 0.2rem;
+    margin-bottom: 30px;
+}
+
+#navbarList {
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    gap: 7rem; 
+    align-items: center;
+    position: relative;
+    left: 120px;
+    right: 0;
+    max-width: 1000px;
+}
+
+#navbarList a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+#logo {
+  width: 80px;
+}
+
+/* Home Page */
+
+.rectangles {
+  width: 90%;
+  max-width: 1500px;
+  height: 755px;
+  background-color: #4B2E83;
+  color: white;
+  font-size: 18px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+} 
+
+.center-wrapper {
+  padding-top: 150px;
+  height: calc(100vh - 280px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+body {
+  font-family: "Encode Sans", sans-serif;
+}
+
+
+.rectangles .rectangle-1 {
+    width: 682px;
+    height: 755px;
+    border-radius: 50px;
+    position: relative;
+    right: 0;
+    top: 0;
+    background-color: #303030;
+    padding: 0;
+    left: 246px;
+}
+.rectangles .rectangle-2 {
+    width: 60px;
+    height: 755px;
+    position: relative;
+    right: 0;
+    top: 0;
+    background-color: #303030;
+    padding: 0;
+}
+
+.overlay-3 {
+    position: relative;
+    width: 572px;
+    height: 108px;
+    top: 28px;
+    left: 41px;
+}
+
+.overlay-3 .text-wrapper-2 {
+    position: relative;
+    width: 572px;
+    top: 0;
+    left: 0;
+    font-family: "Encode Sans-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.overlay-3 p {
+    position: absolute;
+    width: 333px;
+    top: 77px;
+    left: 0;
+    font-family: "Encode Sans", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+}
