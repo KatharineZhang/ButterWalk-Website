@@ -36,7 +36,7 @@ body, html {
   width: 80px;
 }
 
-/* Home Page */
+/* Home Page Section One*/
 
 .rectangles {
   width: 90%;
@@ -118,4 +118,123 @@ body {
     font-size: 20px;
     letter-spacing: 0;
     line-height: normal;
+}
+
+.box {
+    width: 291px;
+    height: 78px;
+}
+
+.box .rectangle {
+    position: relative;
+    width: 291px;
+    height: 78px;
+    top: 550px;
+    left: 0;
+    background-color: #303030;
+    border-radius: 10px;
+}
+
+.download {
+    position: relative;
+    top: 21px;
+    left:30px;
+}
+
+.label {
+    width: 235px;
+    height: 32px;
+}
+
+.label .text-wrapper {
+    position: relative;
+    width: 235px;
+    top: 0;
+    left: 50px;
+    font-family: "Encode Sans-Bold", Helvetica;
+    font-weight: 700;
+    color: #e8d3a2;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+
+/* Home Page Section Two */
+
+.features {
+    padding-top: 500px;
+    padding-bottom: 65px;
+    display: flex; 
+    flex-direction: row;
+    gap: 2rem; 
+}
+
+.feature-1 {
+    position: relative;
+    width: 380px;
+    height: 804px;
+    top: 19px;
+    background-color: #303030;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.feature-text-1 {
+    position: relative;
+    width: 235px;
+    top: 37px;
+    left: 75px;
+    font-family: "Encode Sans-Bold", Helvetica;
+    font-weight: 700;
+    color: #e8d3a2;
+    font-size: 45px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.feature-text-2 {
+    position: relative;
+    top: 50px;
+    width: 270px;
+    left: 58px;
+    font-family: "Encode Sans-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.feature-img {
+    position: absolute;
+    border-radius: 30px;
+
+}
+
+.property .img {
+left: 10px;
+position: absolute;
+width: 359px;
+height: 804px;
+top: 19px;
+}
+
+.property .mask-group-2 {
+left: 770px;
+position: absolute;
+width: 359px;
+height: 804px;
+top: 19px;
+}
+
+.property .mask-group-3 {
+left: 1150px;
+position: absolute;
+width: 359px;
+height: 804px;
+top: 19px;
 }
