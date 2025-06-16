@@ -179,13 +179,18 @@ body {
     background-color: #303030;
     border-radius: 30px;
     overflow: hidden;
+    border: 8px solid #303030;
+    align-self: center;
+      display: flex;
+    align-items: center;     
+    flex-direction: column;
+    text-align: center; 
 }
 
 .feature-text-1 {
     position: relative;
     width: 235px;
     top: 37px;
-    left: 75px;
     font-family: "Encode Sans-Bold", Helvetica;
     font-weight: 700;
     color: #e8d3a2;
@@ -199,7 +204,6 @@ body {
     position: relative;
     top: 50px;
     width: 270px;
-    left: 58px;
     font-family: "Encode Sans-Bold", Helvetica;
     font-weight: 700;
     color: #ffffff;
@@ -209,32 +213,25 @@ body {
     line-height: normal;
 }
 
+.image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .feature-img {
-    position: absolute;
-    border-radius: 30px;
-
+  position: absolute;
+  top: 85px; 
+  border-radius: 50px;
 }
 
-.property .img {
-left: 10px;
-position: absolute;
-width: 359px;
-height: 804px;
-top: 19px;
+.phone {
+  z-index: 2;
+  top: 70px; 
 }
 
-.property .mask-group-2 {
-left: 770px;
-position: absolute;
-width: 359px;
-height: 804px;
-top: 19px;
-}
-
-.property .mask-group-3 {
-left: 1150px;
-position: absolute;
-width: 359px;
-height: 804px;
-top: 19px;
+.background {
+  z-index: 1;
 }
