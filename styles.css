@@ -281,7 +281,7 @@ body {
 
 
 .features {
-    padding-top: 350px;
+    padding-top: 240px;
     padding-bottom: 65px;
     display: flex;
     flex-direction: row;
@@ -375,7 +375,7 @@ body {
 
 #founders {
     position: relative;
-    top: 310px;
+    top: -415px;
     background-color: #4B2E83;
     width: 100%;
     height: calc(100vh - 150px);
