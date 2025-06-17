@@ -204,15 +204,15 @@ body {
   rotate: -10deg;
 }
 
-
-.slant-text {
+/* .slant-text {
     position: absolute;
     top: 550px;
     rotate: -90deg;
     left: -480px;
     color: #e8d3a2;
     font-size: 20px;
-}
+      animation: scroll 10s linear infinite;
+} */
 
 #feature-img {
   position: absolute;
@@ -223,6 +223,38 @@ body {
   z-index: 0;
   rotate: -10deg;
 }
+
+.marquee-wrapper {
+    position: absolute;
+    top: 960px; 
+    left: -30px; /* Adjust based on your layout */
+    overflow: hidden;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+}
+
+.marquee-inner {
+    display: flex;
+    flex-direction: row; /* Still horizontal due to rotation */
+    animation: scroll-vertical 20s linear infinite;
+}
+
+.slant-text {
+    color: #e8d3a2;
+    font-size: 20px;
+    white-space: nowrap;
+    margin-right: 5px; /* space between repeated text */
+}
+
+@keyframes scroll-vertical {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 
 
 /* Home Page Section Two */
