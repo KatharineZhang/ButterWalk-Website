@@ -75,30 +75,6 @@ body {
   font-family: "Encode Sans", sans-serif;
 }
 
-
-
-
-/* .rectangles .rectangle-1 {
-    width: 600px;
-    height: 755px;
-    border-radius: 50px;
-    position: relative;
-    right: 0;
-    top: 0;
-    background-color: #303030;
-    padding: 0;
-    left: 400px;
-} */
-/* .rectangles .rectangle-2 {
-    width: 60px;
-    height: 755px;
-    position: relative;
-    right: 0;
-    top: 0;
-    background-color: #303030;
-    padding: 0;
-} */
-
 .rectangles .rectangle-2 {
     width: 800px;
     height: 1000px;
@@ -351,7 +327,7 @@ body {
 .feature-img {
   width: 280px;
   position: absolute;
-  top: 45px;
+  top: 50px;
   border-radius: 50px;
 }
 
@@ -375,8 +351,67 @@ body {
 
 #founders {
     position: relative;
-    top: -415px;
+    top: 200px;
     background-color: #4B2E83;
     width: 100%;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 240px);
+    z-index: 0;
+}
+
+#founder {
+  background-color: white; 
+  width: 450px;
+  height: 450px;
+  top: 0px;
+  z-index: 1;
+  position: relative; 
+  color: white; 
+  border-radius: 30px;
+}
+
+#founder:hover {
+  background-color: #303030; 
+  color: black; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  color: white;
+  font: 'Encode Sans';
+}
+
+#founder-name {
+  
+}
+
+.header {
+  position: relative;
+  top:40px;
+}
+
+.text-wrapper-4 {
+    position: relative;
+    width: 572px;
+    left: 0;
+    font-family: "Encode Sans-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+    text-align: center;
+}
+
+.founders-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding-top: 100px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
