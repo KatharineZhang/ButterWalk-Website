@@ -1,28 +1,33 @@
 body, html {
   margin: 0;
   padding: 0;
+  /* background-color: #e8d3a2; */
 }
+
 
 /* Navbar */
 
+
 #navbar {
-    background-color: #4B2E83; 
+    background-color: #4B2E83;
     padding: 0.2rem;
     margin-bottom: 30px;
 }
 
+
 #navbarList {
-    list-style: none; 
-    margin: 0; 
-    padding: 0; 
-    display: flex; 
-    gap: 7rem; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 7rem;
     align-items: center;
     position: relative;
     left: 120px;
     right: 0;
     max-width: 1000px;
 }
+
 
 #navbarList a {
   color: white;
@@ -36,7 +41,9 @@ body, html {
   width: 80px;
 }
 
+
 /* Home Page Section One*/
+
 
 .rectangles {
   width: 90%;
@@ -49,7 +56,9 @@ body, html {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-} 
+  overflow: hidden;
+}
+
 
 .center-wrapper {
   padding-top: 150px;
@@ -60,13 +69,17 @@ body, html {
 }
 
 
+
+
 body {
   font-family: "Encode Sans", sans-serif;
 }
 
 
-.rectangles .rectangle-1 {
-    width: 682px;
+
+
+/* .rectangles .rectangle-1 {
+    width: 600px;
     height: 755px;
     border-radius: 50px;
     position: relative;
@@ -74,9 +87,9 @@ body {
     top: 0;
     background-color: #303030;
     padding: 0;
-    left: 246px;
-}
-.rectangles .rectangle-2 {
+    left: 400px;
+} */
+/* .rectangles .rectangle-2 {
     width: 60px;
     height: 755px;
     position: relative;
@@ -84,6 +97,18 @@ body {
     top: 0;
     background-color: #303030;
     padding: 0;
+} */
+
+.rectangles .rectangle-2 {
+    width: 800px;
+    height: 1000px;
+    position: relative;
+    right: 0;
+    top: -100px;
+    background-color: #303030;
+    padding: 0;
+    rotate: 10deg;
+    left: 400px;
 }
 
 .overlay-3 {
@@ -93,6 +118,7 @@ body {
     top: 28px;
     left: 41px;
 }
+
 
 .overlay-3 .text-wrapper-2 {
     position: relative;
@@ -107,6 +133,7 @@ body {
     line-height: normal;
 }
 
+
 .overlay-3 p {
     position: absolute;
     width: 333px;
@@ -120,10 +147,12 @@ body {
     line-height: normal;
 }
 
+
 .box {
     width: 291px;
     height: 78px;
 }
+
 
 .box .rectangle {
     position: relative;
@@ -135,16 +164,19 @@ body {
     border-radius: 10px;
 }
 
+
 .download {
     position: relative;
     top: 21px;
     left:30px;
 }
 
+
 .label {
     width: 235px;
     height: 32px;
 }
+
 
 .label .text-wrapper {
     position: relative;
@@ -160,34 +192,50 @@ body {
     line-height: normal;
 }
 
+
 #demo-phone {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 160px;
-  top: 30px;
+  left: 120px;
+  top: 150px;
   z-index: 1;
+  rotate: -10deg;
+}
+
+
+.slant-text {
+    position: absolute;
+    top: 550px;
+    rotate: -90deg;
+    left: -480px;
+    color: #e8d3a2;
+    font-size: 20px;
 }
 
 #feature-img {
   position: absolute;
   border-radius: 50px;
   align-items: center;
-  left: 175px;
-  top: 45px;
+  left: 135px;
+  top: 165px;
   z-index: 0;
+  rotate: -10deg;
 }
 
+
 /* Home Page Section Two */
+
 
 .features {
     padding-top: 500px;
     padding-bottom: 65px;
-    display: flex; 
+    display: flex;
     flex-direction: row;
-    gap: 2rem; 
+    gap: 2rem;
 }
+
 
 .feature-1 {
     position: relative;
@@ -200,10 +248,11 @@ body {
     border: 8px solid #303030;
     align-self: center;
       display: flex;
-    align-items: center;     
+    align-items: center;    
     flex-direction: column;
-    text-align: center; 
+    text-align: center;
 }
+
 
 .feature-text-1 {
     position: relative;
@@ -218,6 +267,7 @@ body {
     line-height: normal;
 }
 
+
 .feature-text-2 {
     position: relative;
     top: 50px;
@@ -231,6 +281,7 @@ body {
     line-height: normal;
 }
 
+
 .image-wrapper {
   position: relative;
   display: flex;
@@ -238,23 +289,29 @@ body {
   align-items: center;
 }
 
+
 .feature-img {
   position: absolute;
-  top: 85px; 
+  top: 85px;
   border-radius: 50px;
 }
 
+
 .phone {
   z-index: 2;
-  top: 70px; 
+  top: 70px;
 }
+
 
 .background {
   z-index: 1;
 }
 
 
-/* Home Page Section Three */ 
+
+
+/* Home Page Section Three */
+
 
 #founders {
     position: relative;
@@ -263,4 +320,3 @@ body {
     width: 100%;
     height: calc(100vh - 150px);
 }
-
