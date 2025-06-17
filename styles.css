@@ -1,7 +1,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  /* background-color: #e8d3a2; */
+  /* background-color: #d2d2d2; */
 }
 
 
@@ -136,11 +136,11 @@ body {
 
 .overlay-3 p {
     position: absolute;
-    width: 333px;
+    width: 700px;
     top: 77px;
     left: 0;
-    font-family: "Encode Sans", Helvetica;
-    font-weight: 700;
+    font-family: "Encode Sans";
+    font-weight: 100;
     color: #ffffff;
     font-size: 20px;
     letter-spacing: 0;
@@ -235,7 +235,7 @@ body {
 
 .marquee-inner {
     display: flex;
-    flex-direction: row; /* Still horizontal due to rotation */
+    flex-direction: row;
     animation: scroll-vertical 20s linear infinite;
 }
 
@@ -243,7 +243,7 @@ body {
     color: #e8d3a2;
     font-size: 20px;
     white-space: nowrap;
-    margin-right: 5px; /* space between repeated text */
+    margin-right: 5px; 
 }
 
 @keyframes scroll-vertical {
@@ -258,22 +258,45 @@ body {
 
 
 /* Home Page Section Two */
+.features-marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.features-marquee-inner {
+  display: flex;
+  width: max-content;
+  animation: slide-left 20s linear infinite;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0%);
+  }
+  200% {
+    transform: translateX(-50%);
+  }
+}
 
 
 .features {
-    padding-top: 500px;
+    padding-top: 350px;
     padding-bottom: 65px;
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    animation: scroll-vertical 20s linear infinite;
+    display: flex;
+    list-style: none;
+    margin: 0;
 }
 
 
 .feature-1 {
     position: relative;
-    width: 380px;
-    height: 804px;
-    top: 19px;
+    width: 320px;
+    height: 600px;
+    top: 10px;
     background-color: #303030;
     border-radius: 30px;
     overflow: hidden;
@@ -283,17 +306,20 @@ body {
     align-items: center;    
     flex-direction: column;
     text-align: center;
+    min-width: 300px; /* adjust based on your design */
+    flex-shrink: 0;
+    margin-right: 20px;
 }
 
 
 .feature-text-1 {
     position: relative;
     width: 235px;
-    top: 37px;
+    top: 20px;
     font-family: "Encode Sans-Bold", Helvetica;
     font-weight: 700;
     color: #e8d3a2;
-    font-size: 45px;
+    font-size: 40px;
     text-align: center;
     letter-spacing: 0;
     line-height: normal;
@@ -302,12 +328,12 @@ body {
 
 .feature-text-2 {
     position: relative;
-    top: 50px;
+    top: 30px;
     width: 270px;
     font-family: "Encode Sans-Bold", Helvetica;
     font-weight: 700;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     letter-spacing: 0;
     line-height: normal;
@@ -323,15 +349,17 @@ body {
 
 
 .feature-img {
+  width: 280px;
   position: absolute;
-  top: 85px;
+  top: 45px;
   border-radius: 50px;
 }
 
 
 .phone {
+  width: 300px;
   z-index: 2;
-  top: 70px;
+  top: 40px;
 }
 
 
@@ -347,7 +375,7 @@ body {
 
 #founders {
     position: relative;
-    top: 480px;
+    top: 310px;
     background-color: #4B2E83;
     width: 100%;
     height: calc(100vh - 150px);
