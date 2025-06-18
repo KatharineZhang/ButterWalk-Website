@@ -9,7 +9,14 @@ body, html {
 
 
 #navbar {
-    background-color: #4B2E83;
+    /* background-color: #4B2E83; */
+    background: linear-gradient(to bottom, #4B2E83, #e8d3a2, white);
+    /* background: linear-gradient(to bottom, #a583e8, #e8d3a2, white); */
+    /* background: linear-gradient(to bottom, #4B2E83, #a583e8, white); */
+    /* background: linear-gradient(to bottom, #e8d3a2, #a583e8, white); */
+    /* background: linear-gradient(to bottom, #303030, #e8d3a2, white); */
+    /* background: linear-gradient(to bottom, #303030, #4B2E83, white); */
+    height: 700px;
     padding: 0.2rem;
     margin-bottom: 30px;
 }
@@ -25,7 +32,7 @@ body, html {
     position: relative;
     left: 120px;
     right: 0;
-    max-width: 1000px;
+    /* max-width: 1000px; */
 }
 
 
@@ -46,10 +53,11 @@ body, html {
 
 
 .rectangles {
-  width: 90%;
+  width: 98%;
   max-width: 1500px;
   height: 755px;
   background-color: #4B2E83;
+  /* background-color: #303030; */
   color: white;
   font-size: 18px;
   border-radius: 50px;
@@ -61,7 +69,9 @@ body, html {
 
 
 .center-wrapper {
-  padding-top: 150px;
+  padding-top: 0;
+  top: -570px;  
+  position: relative;
   height: calc(100vh - 280px);
   display: flex;
   align-items: center;
@@ -82,6 +92,7 @@ body {
     right: 0;
     top: -100px;
     background-color: #303030;
+    /* background-color: #4B2E83; */
     padding: 0;
     rotate: 10deg;
     left: 400px;
@@ -137,6 +148,7 @@ body {
     top: 550px;
     left: 0;
     background-color: #303030;
+    /* background-color: #4B2E83; */
     border-radius: 10px;
 }
 
@@ -348,14 +360,24 @@ body {
 
 /* Home Page Section Three */
 
+.move-center {
+  top: -440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 #founders {
     position: relative;
-    top: 200px;
-    background-color: #4B2E83;
+    top: -440px;
+    /* background-color: #4B2E83; */
+    background-color: #303030;
+    /* background: linear-gradient(to left, white, #4B2E83, #4B2E83,  #4B2E83, #4B2E83, #4B2E83, white); */
     width: 100%;
     height: calc(100vh - 240px);
     z-index: 0;
+    /* border-radius: 50px; */
+    overflow: hidden;
 }
 
 #founder {
@@ -367,10 +389,11 @@ body {
   position: relative; 
   color: white; 
   border-radius: 30px;
+  text-align: center;
 }
 
 #founder:hover {
-  background-color: #303030; 
+  background-color: #4B2E83; 
   color: black; 
   transition: background-color 0.3s ease, color 0.3s ease;
   text-align: center;
@@ -382,6 +405,7 @@ body {
   font-size: 30px;
   position: relative;
   top: 50px;
+  color: #e8d3a2;
 }
 
 .founder-email {
@@ -398,6 +422,22 @@ body {
   padding-right: 47px;
   line-height: 1.5;
 }
+
+/* Hide content by default */
+.founder-name,
+.founder-email,
+.founder-text {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Reveal on hover */
+#founder:hover .founder-name,
+#founder:hover .founder-email,
+#founder:hover .founder-text {
+  opacity: 1;
+}
+
 
 .header {
   position: relative;
@@ -431,4 +471,30 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.text-1 {
+  position: absolute;
+  rotate: 90deg;
+  height: 300px;
+  left: -450px;
+  /* top: 150px; */
+  color: #e8d3a2;
+  font-size: 20px;
+  white-space: nowrap;
+  height: calc(100vh - 240px);
+  animation: scroll-vertical 20s linear infinite;
+}
+
+.text-2 {
+  position: absolute;
+  rotate: 90deg;
+  height: 300px;
+  left: 760px;
+  /* top: 150px; */
+  color: #e8d3a2;
+  font-size: 20px;
+  white-space: nowrap;
+  height: calc(100vh - 240px);
+  animation: scroll-vertical 20s linear infinite;
 }
