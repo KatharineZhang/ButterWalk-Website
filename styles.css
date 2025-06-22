@@ -127,22 +127,22 @@ body {
 
 .overlay-3 .text-wrapper-2 {
     position: relative;
-    width: 800px;
+    width: 900px;
     top: 0;
     left: 0;
     font-family: "Encode Sans-Bold", Helvetica;
     font-weight: 700;
     color: #ffffff;
-    font-size: 90px;
+    font-size: 130px;
     letter-spacing: 0;
-    line-height: normal;
+    line-height: 120px;
 }
 
 
 .overlay-3 p {
     position: absolute;
     width: 700px;
-    top: 120px;
+    top: 260px;
     left: 0;
     font-family: "Encode Sans";
     font-weight: 100;
@@ -163,7 +163,7 @@ body {
     position: relative;
     width: 291px;
     height: 78px;
-    top: 490px;
+    top: 350px;
     left: 0;
     background-color: #303030;
     /* background-color: #4B2E83; */
@@ -375,15 +375,16 @@ body {
 /* Home Page Section Three */
 
 .move-center {
-  top: -440px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100px;
+  /* position: absolute; */
 }
 
 #founders {
     position: relative;
-    top: -440px;
+    top: -170px;
     /* background-color: #4B2E83; */
     background-color: #303030;
     /* background: linear-gradient(to left, white, #4B2E83, #4B2E83,  #4B2E83, #4B2E83, #4B2E83, white); */
@@ -517,7 +518,7 @@ body {
 
 .footer {
   position: relative;
-  /* top: -440px; */
+  top: 108px;
   width: 100%;
   height: 350px;
   background-color: #4B2E83;
