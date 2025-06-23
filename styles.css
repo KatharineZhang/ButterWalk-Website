@@ -558,3 +558,102 @@ body {
   color: white;
   text-decoration: underline;
 }
+
+
+/* Features */
+
+/* Banners */
+
+.banner-wrapper {
+    position: relative;
+    top: -630px;
+    overflow: hidden;
+}
+
+.banner-inner {
+    display: flex;
+    flex-direction: row;
+    animation: scroll-vertical 20s linear infinite;
+    font-family: 'MyCustomFont';
+}
+
+.banner-text {
+    font-family: 'MyCustomFont';
+    color: #e8d3a2;
+    font-size: 40px;
+    white-space: nowrap;
+    padding: 3px;
+}
+
+@keyframes scroll-vertical {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.center-wrapper-3 {
+  padding-top: 0;
+  top: -570px;  
+  position: relative;
+  height: calc(100vh - 280px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rectangles-1 {
+  width: 98%;
+  max-width: 1500px;
+  height: 670px;
+  background-color: #4B2E83;
+  color: white;
+  font-size: 18px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.rectangles-2 {
+  width: 98%;
+  max-width: 1500px;
+  height: 670px;
+  background-color: #4B2E83;
+  color: white;
+  font-size: 18px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  top: 90px;
+  z-index: -1;
+}
+
+#demo-phone-1 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 1100px;
+  z-index: 3;
+  width: 300px;
+  top:10px;
+}
+
+#feature-img-1 {
+  position: absolute;
+  border-radius: 50px;
+  align-items: center;
+  left: 1110px;
+  top: 18px;
+  z-index: 2;
+  width: 280px;
+  height: 590px;
+}
