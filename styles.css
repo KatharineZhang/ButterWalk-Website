@@ -570,6 +570,12 @@ body {
     overflow: hidden;
 }
 
+.banner-wrapper-1 {
+    position: relative;
+    top: -300px;
+    overflow: hidden;
+}
+
 .banner-inner {
     display: flex;
     flex-direction: row;
@@ -636,24 +642,94 @@ body {
   z-index: -1;
 }
 
+.rectangles-3 {
+  width: 98%;
+  max-width: 1500px;
+  height: 670px;
+  background-color: #4B2E83;
+  color: white;
+  font-size: 18px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  top: 190px;
+  z-index: -1;
+}
+
 #demo-phone-1 {
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 1100px;
+  left: 180px;
   z-index: 3;
   width: 300px;
-  top:10px;
+  top:142px;
+  rotate: -10deg;
 }
 
 #feature-img-1 {
   position: absolute;
   border-radius: 50px;
   align-items: center;
-  left: 1110px;
-  top: 18px;
+  left: 190px;
+  /* top: 18px; */
+  top: 150px;
   z-index: 2;
   width: 280px;
   height: 590px;
+  rotate: -10deg;
+}
+
+.overlay-3 .text-wrapper-3 {
+    position: relative;
+    width: 900px;
+    top: 50px;
+    left: 0;
+    font-family: "Encode Sans-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 80px;
+    letter-spacing: 0;
+    align-items: center;
+}
+
+.overlay-3 .p1 {
+    position: absolute;
+    width: 700px;
+    top: 150px;
+    left: 0;
+    font-family: "Encode Sans";
+    font-weight: 100;
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: normal;
+    
+}
+
+ul {
+  list-style-type: disc;   
+  line-height: 2;         
+  padding-left: 70px;     
+}
+
+.rectangle-3 {
+    width: 800px;
+    height: 1000px;
+    position: relative;
+    right: 0;
+    top: -100px;
+    background-color: #303030;
+    padding: 0;
+    rotate: 10deg;
+    left: 300px;
+    z-index: -1;
+}
+
+.move {
+  padding-top: 350px;
 }
