@@ -42,7 +42,7 @@ body, html {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 7rem;
+    gap: 7em;
     align-items: center;
     position: relative;
     left: 120px;
@@ -70,7 +70,8 @@ body, html {
 .rectangles {
   width: 98%;
   max-width: 1500px;
-  height: 755px;
+  /* height: 755px; */
+  height: calc(100vh - 150px);
   background-color: #4B2E83;
   /* background-color: #303030; */
   color: white;
@@ -306,7 +307,9 @@ body {
     position: relative;
     width: 320px;
     height: 600px;
-    top: 10px;
+    /* top: 100px; */
+    /* top: calc(100vh - 98vh); */
+    height: calc(100vh - 280px);
     background-color: #303030;
     border-radius: 30px;
     overflow: hidden;
@@ -387,32 +390,31 @@ body {
   justify-content: center;
   align-items: center;
   height: 100px;
-  /* position: absolute; */
 }
 
 #founders {
-    position: relative;
-    top: 460px;
-    /* background-color: #4B2E83; */
-    background-color: #303030;
-    /* background: linear-gradient(to left, white, #4B2E83, #4B2E83,  #4B2E83, #4B2E83, #4B2E83, white); */
-    width: 100%;
-    height: calc(100vh - 240px);
-    z-index: 0;
-    /* border-radius: 50px; */
-    overflow: hidden;
+  position: relative;
+  top: 460px;
+  background-color: #303030;
+  width: 100%;
+  height: calc(100vh - 240px);
+  z-index: 0;
+  overflow: hidden;
 }
 
 #founder {
   background-color: white; 
-  width: 450px;
-  height: 450px;
+  /* width: 450px; */
+  width: calc(100vh - 430px);
+  /* height: 450px; */
+  height: calc(100vh - 430px);
   top: 0px;
   z-index: 1;
   position: relative; 
-  color: white; 
+  color: white;
   border-radius: 30px;
   text-align: center;
+  font-size: 2vw;
 }
 
 #founder:hover {
@@ -425,24 +427,24 @@ body {
 }
 
 .founder-name {
-  font-size: 30px;
+  font-size: 1em;
   position: relative;
-  top: 50px;
+  top: 1.4em;
   color: #e8d3a2;
 }
 
 .founder-email {
-  font-size: 15px;
+  font-size: 0.5em;
   position: relative;
-  top: 65px;
+  top: 4em;
 }
 
 .founder-text {
-  font-size: 20px;
+  font-size: 0.6em;
   position: relative;
-  top: 90px;
-  padding-left: 47px;
-  padding-right: 47px;
+  top: 4em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   line-height: 1.5;
 }
 
