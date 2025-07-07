@@ -136,7 +136,7 @@ body {
 .overlay-3 .text-wrapper-2 {
     position: relative;
     width: 900px;
-    top: 0;
+    top: 50px;
     left: 0;
     font-family: "Encode Sans-Bold", Helvetica;
     font-weight: 700;
@@ -151,7 +151,7 @@ body {
 .overlay-3 p {
     position: absolute;
     width: 700px;
-    top: 150px;
+    top: 180px;
     left: 0;
     font-family: "Encode Sans";
     font-weight: 100;
