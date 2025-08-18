@@ -15,15 +15,83 @@ body, html {
 
 /* Navbar */
 
-
 #navbar {
-    /* background: linear-gradient(to bottom, #4B2E83, #e8d3a2, white); */
-    /* height: 700px; */
-    padding: 0.2rem;
-    margin-bottom: 30px;
-    position: sticky;
-    background-color: #303030;
+  position: sticky;
+  top: 0;
+  background-color: #303030;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 0.5rem 1rem;
+  z-index: 10;
+  justify-content: center;
 }
+
+/* Highlight oval */
+#highlight {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 36px;
+  width: 0;
+  background-color: #E8D3A2;
+  border-radius: 999px;
+  z-index: 0;
+  transition: all 0.25s ease;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* List container */
+#navbarList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  justify-content: center;
+}
+
+/* Oval background for the links */
+#nav-circle {
+  position: relative;
+  display: flex;
+  gap: 3em;
+  padding: 8px 20px;
+  border-radius: 999px;
+  background-color: #4B2E83;
+}
+
+/* Links */
+#nav-circle a {
+  position: relative;
+  z-index: 1; /* text above highlight */
+  color: #E8D3A2;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 6px 12px;
+}
+
+#nav-circle a:hover {
+  /* background-color: #E8D3A2; */
+  color: #303030;   
+  z-index: 0;     
+  /* padding: 1px 14px;    
+  border-radius: 999px;  
+  transition: background-color 0.2s, color 0.2s; */
+}
+
+
+
+#navbarList li a {
+  color: #E8D3A2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 
 #background {
   position: fixed;
@@ -34,30 +102,6 @@ body, html {
   background-color: #ffffff;
   z-index: -100000;
 }
-
-
-
-#navbarList {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 7em;
-    align-items: center;
-    position: relative;
-    left: 120px;
-    right: 0;
-}
-
-
-#navbarList a {
-  color: #E8D3A2;
-  text-decoration: none;
-  font-weight: bolder;
-  font-size: 20px;
-  font-family: 'MyCustomFont';
-}
-
 
 #logo {
   width: 80px;
@@ -627,7 +671,7 @@ body {
 
 .banner-text {
     font-family: 'MyCustomFont';
-    color: #e8d3a2;
+    color: #8E632A;
     font-size: 40px;
     white-space: nowrap;
     padding: 3px;
@@ -645,7 +689,7 @@ body {
 .container {
   height: 740px;
   overflow-y: auto;
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
 }
 
 .card {
@@ -756,6 +800,7 @@ body {
     font-size: 80px;
     letter-spacing: 0;
     align-items: center;
+    rotate: -3deg;
 }
 
 .overlay-3 .p1 {
@@ -769,7 +814,7 @@ body {
     font-size: 25px;
     letter-spacing: 0;
     line-height: normal;
-    
+    rotate: -3deg;
 }
 
 ul {
