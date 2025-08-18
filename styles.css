@@ -9,23 +9,26 @@
 body, html {
   margin: 0;
   padding: 0;
-  /* background-color: #d2d2d2; */
+  padding-top: 40px; 
 }
 
 
 /* Navbar */
 
 #navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;           
   background-color: #303030;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2em;
   padding: 0.5rem 1rem;
-  z-index: 10;
-  justify-content: center;
+  z-index: 1000;         
 }
+
 
 /* Highlight oval */
 #highlight {
@@ -114,14 +117,10 @@ body, html {
 .rectangles {
   z-index: -50;
   width: 120%;
-  /* max-width: 1500px; */
-  /* height: 755px; */
   height: calc(100vh - 0px);
   background-color: #4B2E83;
-  /* background-color: #303030; */
   color: white;
   font-size: 18px;
-  /* border-radius: 50px; */
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -134,7 +133,6 @@ body, html {
 
 .center-wrapper {
   padding-top: 0;
-  top: -15px;  
   left:0;
   position: relative;
   height: calc(100vh - 280px);
@@ -146,7 +144,6 @@ body, html {
 
 .center-wrapper-2 {
   padding-top: 0;
-  /* top:-390px; */
   position: relative;
   height: calc(100vh - 280px);
   display: flex;
@@ -343,6 +340,7 @@ body {
   overflow: hidden;
   position: relative;
   z-index: 100;
+  rotate: 3deg;;
 }
 
 .features-marquee-inner {
@@ -382,7 +380,7 @@ body {
     /* top: calc(100vh - 98vh); */
     height: calc(100vh - 280px);
     background-color: #303030;
-    border-radius: 40px;
+    border-radius: 20px;
     overflow: hidden;
     border: 2px solid #8E632A;
     align-self: center;
@@ -393,6 +391,7 @@ body {
     min-width: 300px; /* adjust based on your design */
     flex-shrink: 0;
     margin-right: 10px;
+    rotate: -3deg;
 }
 
 
@@ -400,7 +399,7 @@ body {
     position: relative;
     width: 235px;
     top: 20px;
-    font-family: "Encode Sans-Bold", Helvetica;
+    font-family: "MyCustomFont", Helvetica;
     font-weight: 700;
     color: #E8D3A2;
     font-size: 40px;
