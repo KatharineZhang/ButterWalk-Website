@@ -22,7 +22,7 @@ body, html {
     padding: 0.2rem;
     margin-bottom: 30px;
     position: sticky;
-    background-color: #E8D3A2;
+    background-color: #303030;
 }
 
 #background {
@@ -31,8 +31,8 @@ body, html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, #4B2E83, #e8d3a2, white);
-  z-index: -100;  /* Pushes it behind all content */
+  background-color: #E8D3A2;
+  z-index: -100000;
 }
 
 
@@ -51,7 +51,7 @@ body, html {
 
 
 #navbarList a {
-  color: #4B2E83;
+  color: #E8D3A2;
   text-decoration: none;
   font-weight: bolder;
   font-size: 20px;
@@ -68,30 +68,36 @@ body, html {
 
 
 .rectangles {
-  width: 98%;
-  max-width: 1500px;
+  z-index: -50;
+  width: 120%;
+  /* max-width: 1500px; */
   /* height: 755px; */
-  height: calc(100vh - 150px);
+  height: calc(100vh - 0px);
   background-color: #4B2E83;
   /* background-color: #303030; */
   color: white;
   font-size: 18px;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   overflow: hidden;
+  rotate: 3deg;
+  left: -2%;
+  position: relative;
 }
 
 
 .center-wrapper {
   padding-top: 0;
-  top: 60px;  
+  top: -15px;  
+  left:0;
   position: relative;
   height: calc(100vh - 280px);
   display: flex;
   align-items: center;
   justify-content: center;
+  width:120%;
 }
 
 .center-wrapper-2 {
@@ -108,7 +114,7 @@ body, html {
 
 
 body {
-  font-family: "Encode Sans", sans-serif;
+  font-family: "MyCustomFont", sans-serif;
 }
 
 .rectangles .rectangle-2 {
@@ -116,20 +122,21 @@ body {
     height: 1000px;
     position: relative;
     right: 0;
-    top: -100px;
+    top: 0px;
     background-color: #303030;
     /* background-color: #4B2E83; */
     padding: 0;
-    rotate: 10deg;
-    left: 400px;
+    rotate: 7deg;
+    left: 5%;
 }
 
 .overlay-3 {
     position: relative;
-    width: 572px;
-    height: 108px;
-    /* top: 28px; */
-    left: 41px;
+    /* width: 572px;
+    height: 108px; */
+    top: 17%;
+    left: 5%;
+    rotate: -3deg;
 }
 
 
@@ -138,21 +145,21 @@ body {
     width: 900px;
     top: 50px;
     left: 0;
-    font-family: "Encode Sans-Bold", Helvetica;
+    font-family: "MyCustomFont", Helvetica;
     font-weight: 700;
     color: #E8D3A2;
     font-size: 100px;
     letter-spacing: 0;
     line-height: 120px;
-      letter-spacing: -5px; 
+    letter-spacing: -5px; 
 }
 
 
 .overlay-3 p {
     position: absolute;
-    width: 700px;
+    width: 50%;
     top: 180px;
-    left: 0;
+    /* left: 10%; */
     font-family: "Encode Sans";
     font-weight: 100;
     color: #ffffff;
@@ -172,7 +179,7 @@ body {
     position: relative;
     width: 291px;
     height: 78px;
-    top: 480px;
+    top: 425px;
     left: 0;
     background-color: #303030;
     /* background-color: #4B2E83; */
@@ -266,19 +273,39 @@ body {
     }
 }
 
+#divider {
+  width: 100%;
+  position: relative;
+  height: 10%;
+  background-color: #E8D3A2;
+  top: 9%;
+  z-index: -10000;
+}
+
+#divider2 {
+  width: 100%;
+  position: relative;
+  height: 10%;
+  background-color: #E8D3A2;
+  top: 15%;
+  z-index: -10000;
+}
 
 
 /* Home Page Section Two */
 .features-marquee-wrapper {
   width: 100%;
+  top: -5%;
   overflow: hidden;
   position: relative;
+  z-index: 100;
 }
 
 .features-marquee-inner {
   display: flex;
   width: max-content;
   animation: slide-left 20s linear infinite;
+  z-index: 100;
 }
 
 @keyframes slide-left {
@@ -307,13 +334,13 @@ body {
     position: relative;
     width: 320px;
     height: 600px;
-    /* top: 100px; */
+    top: 10px;
     /* top: calc(100vh - 98vh); */
     height: calc(100vh - 280px);
     background-color: #303030;
-    border-radius: 30px;
+    border-radius: 40px;
     overflow: hidden;
-    border: 8px solid #303030;
+    border: 2px solid #8E632A;
     align-self: center;
       display: flex;
     align-items: center;    
@@ -321,7 +348,7 @@ body {
     text-align: center;
     min-width: 300px; /* adjust based on your design */
     flex-shrink: 0;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 
@@ -331,7 +358,7 @@ body {
     top: 20px;
     font-family: "Encode Sans-Bold", Helvetica;
     font-weight: 700;
-    color: #e8d3a2;
+    color: #E8D3A2;
     font-size: 40px;
     text-align: center;
     letter-spacing: 0;
@@ -390,16 +417,19 @@ body {
   justify-content: center;
   align-items: center;
   height: 100px;
+  width: 150%;
 }
 
 #founders {
   position: relative;
-  top: 460px;
+  top: 250px;
   background-color: #303030;
-  width: 100%;
-  height: calc(100vh - 240px);
+  width: 120%;
+  height: calc(100vh - 200px);
   z-index: 0;
   overflow: hidden;
+  rotate: 1deg;
+  left: -25%;
 }
 
 #founder {
@@ -415,6 +445,7 @@ body {
   border-radius: 30px;
   text-align: center;
   font-size: 2vw;
+  z-index: -10000;
 }
 
 #founder:hover {
@@ -496,6 +527,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  rotate: -1deg;
+  width: 120%;
 }
 
 .text-1 {
@@ -528,7 +561,7 @@ body {
 
 .footer {
   position: relative;
-  top: 739px;
+  top: 518px;
   width: 100%;
   height: 350px;
   background-color: #4B2E83;
@@ -541,7 +574,7 @@ body {
   flex-wrap: wrap;
   text-align: left;
   line-height: 2;
-  z-index: 0;
+  z-index: -100;
 }
 
 .footer-section {
