@@ -31,7 +31,7 @@ body, html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #E8D3A2;
+  background-color: #ffffff;
   z-index: -100000;
 }
 
@@ -132,8 +132,8 @@ body {
 
 .overlay-3 {
     position: relative;
-    /* width: 572px;
-    height: 108px; */
+    width: 50%;
+    /* height: 108px; */
     top: 17%;
     left: 5%;
     rotate: -3deg;
@@ -277,7 +277,7 @@ body {
   width: 100%;
   position: relative;
   height: 10%;
-  background-color: #E8D3A2;
+  background-color: #ffffff;
   top: 9%;
   z-index: -10000;
 }
@@ -428,7 +428,7 @@ body {
   height: calc(100vh - 200px);
   z-index: 0;
   overflow: hidden;
-  rotate: 1deg;
+  rotate: 3deg;
   left: -25%;
 }
 
@@ -445,7 +445,7 @@ body {
   border-radius: 30px;
   text-align: center;
   font-size: 2vw;
-  z-index: -10000;
+  /* z-index: -10000; */
 }
 
 #founder:hover {
@@ -527,7 +527,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  rotate: -1deg;
+  rotate: -3deg;
   width: 120%;
 }
 
@@ -561,7 +561,7 @@ body {
 
 .footer {
   position: relative;
-  top: 518px;
+  top: 515px;
   width: 100%;
   height: 350px;
   background-color: #4B2E83;
@@ -574,7 +574,7 @@ body {
   flex-wrap: wrap;
   text-align: left;
   line-height: 2;
-  z-index: -100;
+  z-index: 200;
 }
 
 .footer-section {
@@ -760,7 +760,7 @@ body {
 
 .overlay-3 .p1 {
     position: absolute;
-    width: 700px;
+    width: 900px;
     top: 150px;
     left: 0;
     font-family: "Encode Sans";
