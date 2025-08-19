@@ -10,6 +10,51 @@ body, html {
   margin: 0;
   padding: 0;
   padding-top: 40px; 
+  overflow-x: hidden;
+}
+
+.slide-left {
+  opacity: 0;
+  transform: translateX(-100px);  /* start off-screen left */
+  transition: all 0.6s ease-out;
+}
+
+.slide-left.active {
+  opacity: 1;
+  transform: translateX(0); /* slide into place */
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(100px);  /* start off-screen to the right */
+  transition: all 0.6s ease-out;
+}
+
+.slide-right.active {
+  opacity: 1;
+  transform: translateX(0); /* move into place */
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(100px);  /* start below */
+  transition: all 0.6s ease-out;
+}
+
+.slide-up.active {
+  opacity: 1;
+  transform: translateY(0); /* move into place */
+}
+
+.slide-down {
+  opacity: 0;
+  transform: translateY(-100px);  /* start above */
+  transition: all 0.6s ease-out;
+}
+
+.slide-down.active {
+  opacity: 1;
+  transform: translateY(0); /* move into place */
 }
 
 
@@ -117,7 +162,7 @@ body, html {
 .rectangles {
   z-index: -50;
   width: 120%;
-  height: calc(100vh - 0px);
+  height: calc(100vh - 20px);
   background-color: #4B2E83;
   color: white;
   font-size: 18px;
@@ -465,7 +510,7 @@ body {
 
 #founders {
   position: relative;
-  top: 250px;
+  top: 285px;
   background-color: #303030;
   width: 120%;
   height: calc(100vh - 200px);
@@ -554,6 +599,7 @@ body {
     letter-spacing: 0;
     line-height: normal;
     text-align: center;
+    margin-bottom: -30px;
 }
 
 .founders-wrapper {
@@ -604,7 +650,7 @@ body {
 
 .footer {
   position: relative;
-  top: 515px;
+  top: 540px;
   width: 100%;
   height: 350px;
   background-color: #4B2E83;
@@ -837,6 +883,6 @@ ul {
 
 .move {
   /* padding-top: 350px; */
-  height: 1790px;
+  /* height: 1790px; */
   z-index: 0;
 }
