@@ -701,10 +701,28 @@ body {
 
 .core-value:hover {
   background-color: #303030; 
-  color: #E8D3A2;           
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* On hover: swap visibility */
+.core-value:hover .default-text {
+  opacity: 0;
+}
+
+.core-value:hover .hover-text {
+  opacity: 1;
+}
+
+.core-value-text.hover-text {
+  opacity: 0;
+  position: absolute; 
+  color: #E8D3A2;
+  font-weight: 700;
+  font-size: 20px;
+  transition: opacity 0.3s ease;
+  max-width: 300px;
+  line-height: 1.5;
+}
 
 .core-value-text {
   font-family: "MyCustomFont", Helvetica;
