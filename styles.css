@@ -851,6 +851,7 @@ body {
   width: 100%;
   white-space: nowrap;
   transform: translateX(-180%);
+  /* transition: opacity 0.4s ease-in-out; */
 }
 
 .scroll-helper {

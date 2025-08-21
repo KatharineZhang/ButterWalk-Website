@@ -48,6 +48,66 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0.2 // adjust: 0.2 means 20% visible
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const sidebarText = document.querySelector(".side-bar-text");
+  const studentSection = document.querySelectorAll(".features-stack")[0];
+  const driverSection = document.querySelectorAll(".features-stack")[1];
+  const footer = document.querySelector(".feature-footer");
+  const header = document.querySelector(".opening-section");
+
+  // Hide by default
+  sidebarText.style.opacity = "0";
+
+  // Function to change text
+  function showText(text) {
+    sidebarText.textContent = text;
+    sidebarText.style.opacity = "1";
+  }
+
+  function hideText() {
+    sidebarText.style.opacity = "0";
+  }
+
+  const options = {
+    root: null,
+    threshold: 0.01 // % of section visible before triggering
+  };
+
+  // Observer for Student Features
+  const studentObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        showText("Student Features");
+      }
+    });
+  }, options);
+
+  // Observer for Driver Features
+  const driverObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        showText("Driver Features");
+      }
+    });
+  }, options);
+
+  // Observer for Footer → hide text
+  const footerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        hideText();
+      }
+    });
+  }, { root: null, threshold: 0.1 });
+
+  // Attach observers
+  studentObserver.observe(studentSection);
+  driverObserver.observe(driverSection);
+  footerObserver.observe(footer);
+  footerObserver.observe(header);
+});
+
+
 document.querySelectorAll('.slide-up, .slide-down, .slide-left, .slide-right')
   .forEach(el => observer.observe(el));
 
