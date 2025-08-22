@@ -888,21 +888,23 @@ body {
   justify-content: center;
   align-items: center;
   left: 13%;
-  top: 11.5%;
+  top: 13%;
   z-index: 1;
+  rotate: -10deg;
+  width: 60%;
   rotate: -7deg;
 }
 
 .feature-img-1 {
   position: absolute;
-  border-radius: 50px;
   align-items: center;
-  left: 15%;
-  top: 12.5%;
+  left: 16%;
+  top: 14%;
   z-index: 0;
+  rotate: -10deg;
+  width: 54%;
   rotate: -7deg;
-  width: 310px;
-  height: 660px;
+  border-radius: 45px;
 }
 
 .feature-footer {
