@@ -403,7 +403,6 @@ body {
     rotate: -3deg;
 }
 
-
 .feature-text-1 {
     position: relative;
     width: 235px;
@@ -860,7 +859,40 @@ body {
 
 .features-stack {
   position: relative;
-  height: 300vh; 
+  height: 600vh; 
+}
+
+.tab {
+  width: 15%;
+  height: 20%;
+  border: 4px solid #303030; 
+  border-radius: 20px 20px 0 0;
+  transform: rotate(-90deg);
+  transform-origin: left top; 
+  position: absolute;         
+  left: 23px;       
+  /* top: 35.6%; */
+  justify-content: center;
+  align-items: center;
+}
+
+.student {
+  top: 35.6%;
+}
+
+.driver {
+  top: 70%;
+}
+
+.tab-text {
+  font-family: "MyCustomFont", Helvetica;
+  font-weight: 700;
+  color: #303030;
+  font-size: 23px;
+  text-align: center;
+  width: 100%;
+  white-space: nowrap;
+  transform: translateY(65%);
 }
 
 .feature-center-wrapper {
@@ -877,10 +909,13 @@ body {
 .feature-center-wrapper:nth-child(1) { z-index: 1; }
 .feature-center-wrapper:nth-child(2) { z-index: 2; }
 .feature-center-wrapper:nth-child(3) { z-index: 3; }
+.feature-center-wrapper:nth-child(4) { z-index: 4; }
+.feature-center-wrapper:nth-child(5) { z-index: 5; }
+.feature-center-wrapper:nth-child(6) { z-index: 6; }
 
 
 .feature-rectangles {
-  width: 85%;
+  width: 90%;
   height: calc(100vh - 170px);
   background-color: #303030;
   color: white;
@@ -891,7 +926,7 @@ body {
   overflow: hidden;
   position: relative;
   border-radius: 40px;
-  left: 5%;
+  /* margin-left: -8%; */
 }
 
 .feature-rectangles .rectangle-3 {
@@ -914,7 +949,6 @@ body {
 .feature-overlay .text-wrapper-2 {
     position: relative;
     width: 900px;
-    /* top: 20px; */
     left: 0;
     font-family: "MyCustomFont", Helvetica;
     font-weight: 700;
