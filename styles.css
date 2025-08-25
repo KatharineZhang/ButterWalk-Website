@@ -830,7 +830,7 @@ body {
 
 .feature-rectangles .rectangle-3 {
     width: 1000%;
-    height: 150%;
+    height: 250%;
     position: relative;
     /* right: 0; */
     top: -100px;
@@ -912,6 +912,114 @@ body {
   width: 100%;
   height: 40%;
   margin: -35vh auto 0 0;
+  background-color: #4B2E83;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 40px 200px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  text-align: left;
+  line-height: 2;
+  z-index: 200;
+}
+
+/* Founders */
+
+.founder-center-wrapper {
+  position: relative;
+  top: 43%;                   
+  transform: translateY(-50%); 
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.founder-rectangles {
+  width: 90%;
+  height: calc(100vh - 170px);
+  background-color: #303030;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  border-radius: 40px;
+}
+
+.founder-rectangles .rectangle-3 {
+    width: 100%;
+    height: 300%;
+    position: relative;
+    top: -100px;
+    background-color: #4B2E83;
+    padding: 0;
+    rotate: 7deg;
+    right: 3%;
+}
+
+.founder-page-text {
+  font-family: "MyCustomFont", Helvetica;
+  font-weight: 700;
+  color: white;
+  font-size: 20px;
+  text-align: left;
+  margin-top: 30%;
+  margin-left: 5%;
+  transform: rotate(-7deg);  
+  width: 70%;
+}
+
+.founder-overlay {
+  width: 50%;
+  margin: 0vh 0vh;
+}
+
+
+.founder-overlay .founder-image {
+    position: relative;
+    width: 150%;
+    height: 70%;
+    left: 0;
+    background-color: #e8d3a2;
+}
+
+
+.founder-overlay .p1 {
+    position: absolute;
+    top: 76%;
+    font-family: "myCustomFont", Helvetica;
+    font-weight: 100;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.founder-overlay .p1 ul {
+  padding-left: 50px;
+  text-align: left;
+}
+
+.founder-overlay .p1 ul #name {
+  font-size: 45px;
+  padding-bottom: 3%;
+  line-height: 1.5;
+}
+
+.founder-overlay .p1 ul #email {
+  line-height: 1.5;
+}
+
+.founder-footer {
+  position: relative;
+  width: 100%;
+  height: 40%;
+  margin: 0vh auto 0 0;
   background-color: #4B2E83;
   color: white;
   display: flex;
