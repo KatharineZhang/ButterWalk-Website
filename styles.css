@@ -87,6 +87,11 @@ body, html {
   background-color: #4B2E83;
 }
 
+#nav-circle a.active-link {
+  color: black;
+  transition: color 0.3s ease;
+}
+
 /* Links */
 #nav-circle a {
   position: relative;
@@ -740,28 +745,30 @@ body {
 }
 
 .core-value-container {
-  display: flex;            
-  justify-content: center;   
-  gap: 20px;                 
+  display: flex;
+  justify-content: center;
+  gap: 20px;                
 }
 
 .core-value {
   flex: 1;
-  min-width: 400px;   
-  min-height: 200px;  
-  background: #ffffff;
+  min-width: 400px;
+  min-height: 200px;
+  background: #E8D3A2;
   padding: 20px;
   border-radius: 20px;
-  display: flex;             
-  justify-content: center;   
-  align-items: center;      
-  text-align: center; 
-  color: #303030;     
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #303030;
+  position: relative;
+  transition: all 0.3s ease; 
 }
 
 .core-value:hover {
-  background-color: #303030; 
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #303030;
+  color: #E8D3A2;
 }
 
 .core-value:hover .default-text {
@@ -774,13 +781,12 @@ body {
 
 .core-value-text.hover-text {
   opacity: 0;
-  position: absolute; 
-  color: #E8D3A2;
+  position: absolute;
   font-weight: 700;
   font-size: 20px;
-  transition: opacity 0.3s ease;
   max-width: 300px;
   line-height: 1.5;
+  transition: opacity 0.3s ease;
 }
 
 .core-value-text {

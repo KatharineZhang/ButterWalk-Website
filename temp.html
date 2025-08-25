@@ -1,61 +1,86 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="globals.css" />
-        <link rel="stylesheet" href="styleguide.css" />
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-    <nav id="navbar" class="navbar">
-        <ul id="navbarList">
-            <li><img id="logo" src="./ButterWalkLogo.png" /></li>
-            <li></li>
-            <li></li>
-            <li><a href="HomePage.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="Menu.html">Menu</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-        </ul>
-    </nav>
-        <div class="property">
-            <div class="overlap">
-                <div class="group">
-                    <div class="rectangles">
-                        <div class="div">
-                            <div class="rectangle"></div>
-                            <div class="rectangle-2"></div>
-                            <img class="image" src="img/image-6.png" />
-                            <img class="img" src="img/image-7.png" />
-                        </div>
-                        <div class="overlap-2">
-                            <p class="text-wrapper">Download on the App Store</p>
-                            <img class="icon-font-awesome" src="img/apple.svg" />
-                        </div>
-                        <div class="overlap-3">
-                            <div class="text-wrapper-2">Husky Butter Walk</div>
-                            <p class="p">Husky Butter Walk is ...</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="propertys">
-        <img class="mask-group" src="img/mask-group-3.png" />
-        <img class="img" src="img/mask-group-6.png" />
-        <img class="mask-group-2" src="img/mask-group.png" />
-        <img class="mask-group-3" src="img/mask-group-10.png" />
-        <div class="component">
-        <img class="mask-group-4" src="img/mask-group-4.png" />
-        <img class="mask-group-5" src="img/mask-group-2.png" />
-        <img class="mask-group-6" src="img/mask-group-8.png" />
-        <img class="mask-group-7" src="img/mask-group-5.png" />
-        <img class="mask-group-8" src="img/image.png" />
-        <img class="mask-group-9" src="img/mask-group-7.png" />
-        <img class="mask-group-10" src="img/mask-group-9.png" />
-        <img class="mask-group-11" src="img/mask-group-11.png" />
-        </div>
-        </div>
-    </body>
-</html>
+<style>
+.core-value-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.core-value {
+  flex: 1;
+  min-width: 400px;
+  min-height: 200px;
+  background: #E8D3A2;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #303030;
+  position: relative;
+  transition: all 0.3s ease; /* smooth growth/shrink */
+}
+
+.core-value:hover {
+  background-color: #303030;
+  color: #E8D3A2;
+}
+
+.core-value-text.hover-text {
+  opacity: 0;
+  position: absolute;
+  font-weight: 700;
+  font-size: 20px;
+  max-width: 300px;
+  line-height: 1.5;
+  transition: opacity 0.3s ease;
+}
+
+.core-value:hover .default-text {
+  opacity: 0;
+}
+
+.core-value:hover .hover-text {
+  opacity: 1;
+}
+</style>
+
+<div class="value-rectangle">
+  <div class="core-value-container">
+    <div class="core-value">
+      <div class="core-value-text default-text">Safety First</div>
+      <div class="core-value-text hover-text">We prioritize your safety by making every ride visible and trackable in real time.</div>
+    </div>
+    <div class="core-value">
+      <div class="core-value-text default-text">Seamless & Simple</div>
+      <div class="core-value-text hover-text">From opening the app to arrival, every interaction is designed to be intuitive, fast, and frustration-free.</div>
+    </div>
+    <div class="core-value">
+      <div class="core-value-text default-text">Community Driven</div>
+      <div class="core-value-text hover-text">Initiated by Huskies, supported by UWPD, and built for the entire Husky community.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const cards = document.querySelectorAll('.core-value');
+
+cards.forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    // Make hovered card slightly bigger
+    card.style.transform = 'scale(1.03, 1.15)'; // 10% wider, 30px taller approx
+
+    // Shrink the others slightly
+    cards.forEach(other => {
+      if (other !== card) {
+        other.style.transform = 'scale(0.97, 0.95)'; // slightly smaller
+      }
+    });
+  });
+
+  card.addEventListener('mouseleave', () => {
+    // Reset all cards
+    cards.forEach(c => c.style.transform = 'scale(1, 1)');
+  });
+});
+</script>

@@ -1,24 +1,80 @@
+// document.addEventListener("DOMContentLoaded", () => {
+//   const nav = document.getElementById("nav-circle");
+//   const links = nav.querySelectorAll("a");
+//   const highlight = document.getElementById("highlight");
+
+//   const currentPage = window.location.pathname.split("/").pop();
+//   let activeLink =
+//     Array.from(links).find(a => a.getAttribute("href") === currentPage) || links[0];
+
+//   function positionTo(link) {
+//     const left = link.offsetLeft;
+//     const width = link.offsetWidth;
+//     const height = link.offsetHeight;
+//     highlight.style.width = width + "px";
+//     highlight.style.height = height + "px";
+//     highlight.style.transform = `translateX(${left}px) translateY(-50%)`;
+//     highlight.style.opacity = 1;
+//   }
+
+//   // Initial position on page load
+//   requestAnimationFrame(() => positionTo(activeLink));
+
+//   // Move on hover
+//   links.forEach(link => {
+//     link.addEventListener("mouseenter", () => positionTo(link));
+//     link.addEventListener("click", () => { activeLink = link; }); // keep active if staying on page
+//   });
+
+//   // Snap back to active link when leaving the nav (don't hide)
+//   nav.addEventListener("mouseleave", () => positionTo(activeLink));
+
+//   // Recalculate on resize
+//   window.addEventListener("resize", () => positionTo(activeLink));
+// });
+
 document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll("#nav-circle a");
   const highlight = document.getElementById("highlight");
 
-  links.forEach(link => {
-    link.addEventListener("mouseenter", () => {
-      const left = link.offsetLeft;
-      const width = link.offsetWidth;
-      const height = link.offsetHeight;
+  function moveHighlight(link) {
+    const left = link.offsetLeft;
+    const width = link.offsetWidth;
+    const height = link.offsetHeight;
 
-      highlight.style.opacity = 1;
-      highlight.style.width = width + "px";
-      highlight.style.height = height + "px";
-      highlight.style.transform = `translateX(${left}px) translateY(-50%)`;
-    });
+    highlight.style.opacity = 1;
+    highlight.style.width = width + "px";
+    highlight.style.height = height + "px";
+    highlight.style.transform = `translateX(${left}px) translateY(-50%)`;
+
+    // Reset all text colors
+    links.forEach(l => l.classList.remove("active-link"));
+    // Set active one to black
+    link.classList.add("active-link");
+  }
+
+  // Detect current page from URL
+  const currentPage = window.location.pathname.split("/").pop();
+  let activeLink = Array.from(links).find(
+    link => link.getAttribute("href") === currentPage
+  );
+
+  if (!activeLink) {
+    activeLink = links[0]; // fallback to first link
+  }
+  moveHighlight(activeLink);
+
+  // Hover effect
+  links.forEach(link => {
+    link.addEventListener("mouseenter", () => moveHighlight(link));
   });
 
   document.getElementById("nav-circle").addEventListener("mouseleave", () => {
-    highlight.style.opacity = 0;
+    moveHighlight(activeLink); // return to active page
   });
 });
+
+
 
 const slides = document.querySelectorAll('.slide-left, .slide-right, .slide-up, .slide-down');
 
@@ -112,6 +168,27 @@ const faqItems = document.querySelectorAll(".faq-item");
 faqItems.forEach(item => {
   item.querySelector(".faq-question").addEventListener("click", () => {
     item.classList.toggle("active");
+  });
+});
+
+const cards = document.querySelectorAll('.core-value');
+
+cards.forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    // Make hovered card slightly bigger
+    card.style.transform = 'scale(1.03, 1.15)'; // 10% wider, 30px taller approx
+
+    // Shrink the others slightly
+    cards.forEach(other => {
+      if (other !== card) {
+        other.style.transform = 'scale(0.97, 0.95)'; // slightly smaller
+      }
+    });
+  });
+
+  card.addEventListener('mouseleave', () => {
+    // Reset all cards
+    cards.forEach(c => c.style.transform = 'scale(1, 1)');
   });
 });
 
