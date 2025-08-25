@@ -969,10 +969,15 @@ body {
   color: white;
   font-size: 20px;
   text-align: left;
-  margin-top: 30%;
+  margin-top: 17%;
   margin-left: 5%;
   transform: rotate(-7deg);  
-  width: 70%;
+  width: 85%;
+}
+
+.founder-page-text ul li {
+  padding-bottom: 3%;
+  line-height: 1.5;
 }
 
 .founder-overlay {
