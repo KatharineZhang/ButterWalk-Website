@@ -107,6 +107,13 @@ document.addEventListener("DOMContentLoaded", () => {
   footerObserver.observe(header);
 });
 
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+  item.querySelector(".faq-question").addEventListener("click", () => {
+    item.classList.toggle("active");
+  });
+});
 
 document.querySelectorAll('.slide-up, .slide-down, .slide-left, .slide-right')
   .forEach(el => observer.observe(el));

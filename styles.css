@@ -605,6 +605,66 @@ body {
   animation: scroll-vertical 20s linear infinite;
 }
 
+.footer-header {
+  position: relative;
+  width: 100%;
+  left: 0;
+  font-family: "MyCustomFont", Helvetica;
+  font-weight: 700;
+  color: #303030;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+  margin-top: 35%;
+}
+    .faq-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      top: 10%;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: #4B2E83;
+      color: #ffffff;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.3s ease;
+      width: 100%;
+    }
+
+    .faq-question {
+      padding: 18px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .faq-question:hover {
+      background: #303030;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 20px;
+      background: #303030;
+      color: #E8D3A2;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px; /* enough space for text */
+      padding: 15px 20px;
+    }
+
 /* Footer */
 
 .footer {
@@ -612,7 +672,7 @@ body {
   /* top: 540px; */
   width: 100%;
   height: 30%;
-  margin: 60vh auto 0 0;
+  margin: 15vh auto 0 0;
   background-color: #4B2E83;
   color: white;
   display: flex;
