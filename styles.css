@@ -12,6 +12,7 @@ body, html {
   padding-top: 40px; 
   overflow-x: hidden;
   font-family: "MyCustomFont", sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* Animations */
@@ -391,7 +392,7 @@ body {
     background-color: #303030;
     border-radius: 20px;
     overflow: hidden;
-    border: 2px solid #8E632A;
+    border: 2px solid #303030;
     align-self: center;
       display: flex;
     align-items: center;    
@@ -409,11 +410,12 @@ body {
     top: 20px;
     font-family: "MyCustomFont", Helvetica;
     font-weight: 700;
-    color: #E8D3A2;
+    color: #ffffff;
     font-size: 40px;
     text-align: center;
     letter-spacing: 0;
     line-height: normal;
+    left: 13%;
 }
 
 
@@ -430,6 +432,52 @@ body {
     line-height: normal;
 }
 
+.feature-button {
+  position: relative;
+  top: 17%;
+  display: inline-block;
+}
+
+.feature-button-link {
+  text-decoration: none;
+  color: black;
+}
+
+.feature-button-box {
+  display: flex;
+  align-items: center;   /* makes children equal height */
+  background-color: #C0AA73; /* left tan side */
+  clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+  font-family: "Encode Sans-Bold", Helvetica;
+  font-weight: bold;
+  width: 180px;  
+}
+
+
+.feature-button-text {
+  font-family: "Encode Sans-Bold", Helvetica;
+  flex: 1;
+}
+
+.feature-button-arrow {
+  background-color: #9C8658; /* darker tan */
+  display: flex;
+  align-items: center;       /* centers arrow vertically */
+  justify-content: center;   /* centers arrow horizontally */
+  clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+  font-size: 30px;
+  font-weight: bold;
+  height: 45px;                 /* makes it taller */
+  width: 40px;
+  color: #ffffff;        /* fixed width */
+
+}
+
+.feature-button-arrow img {
+  height: 20px;          /* makes arrow smaller */
+  width: auto;
+}
+
 
 .image-wrapper {
   position: relative;
@@ -440,17 +488,17 @@ body {
 
 
 .feature-img {
-  width: 280px;
+  width: 317px;
   position: absolute;
-  top: 50px;
-  border-radius: 50px;
+  top: -4px;
+  /* border-radius: 50px; */
 }
 
 
 .phone {
-  width: 300px;
+  width: 310px;
   z-index: 2;
-  top: 40px;
+  top: 0px;
 }
 
 
@@ -458,6 +506,17 @@ body {
   z-index: 1;
 }
 
+.feature-box {
+  position: relative;
+  width: 100%;
+  height: 33%;
+  top: 75%;
+  left: 0;
+  background-color: #303030;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
@@ -859,35 +918,44 @@ body {
 
 .features-stack {
   position: relative;
-  height: 600vh; 
+  height: 1000vh; 
 }
 
 .tab {
-  width: 15%;
   height: 20%;
-  border: 4px solid #303030; 
+  /* border: 4px solid #303030;  */
   border-radius: 20px 20px 0 0;
   transform: rotate(-90deg);
   transform-origin: left top; 
-  position: absolute;         
+  position: absolute;    
   left: 23px;       
   /* top: 35.6%; */
   justify-content: center;
   align-items: center;
 }
 
+.general {
+  top: 24.7%;
+  width: 10%;
+  background-color: #303030;     
+}
+
 .student {
-  top: 35.6%;
+  top: 61%;
+  width: 16%;
+  background-color: #303030;     
 }
 
 .driver {
-  top: 70%;
+  top: 97.6%;
+  width: 16%;
+  background-color: #303030;     
 }
 
 .tab-text {
   font-family: "MyCustomFont", Helvetica;
   font-weight: 700;
-  color: #303030;
+  color: #E8D3A2;
   font-size: 23px;
   text-align: center;
   width: 100%;
@@ -912,6 +980,9 @@ body {
 .feature-center-wrapper:nth-child(4) { z-index: 4; }
 .feature-center-wrapper:nth-child(5) { z-index: 5; }
 .feature-center-wrapper:nth-child(6) { z-index: 6; }
+.feature-center-wrapper:nth-child(7) { z-index: 7; }
+.feature-center-wrapper:nth-child(8) { z-index: 8; }
+.feature-center-wrapper:nth-child(9) { z-index: 9; }
 
 
 .feature-rectangles {
@@ -988,7 +1059,7 @@ body {
   justify-content: center;
   align-items: center;
   left: 13%;
-  top: 13%;
+  top: 6%;
   z-index: 1;
   rotate: -10deg;
   width: 60%;
@@ -999,7 +1070,7 @@ body {
   position: absolute;
   align-items: center;
   left: 16%;
-  top: 14%;
+  top: 7%;
   z-index: 0;
   rotate: -10deg;
   width: 54%;

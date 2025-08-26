@@ -1,38 +1,3 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//   const nav = document.getElementById("nav-circle");
-//   const links = nav.querySelectorAll("a");
-//   const highlight = document.getElementById("highlight");
-
-//   const currentPage = window.location.pathname.split("/").pop();
-//   let activeLink =
-//     Array.from(links).find(a => a.getAttribute("href") === currentPage) || links[0];
-
-//   function positionTo(link) {
-//     const left = link.offsetLeft;
-//     const width = link.offsetWidth;
-//     const height = link.offsetHeight;
-//     highlight.style.width = width + "px";
-//     highlight.style.height = height + "px";
-//     highlight.style.transform = `translateX(${left}px) translateY(-50%)`;
-//     highlight.style.opacity = 1;
-//   }
-
-//   // Initial position on page load
-//   requestAnimationFrame(() => positionTo(activeLink));
-
-//   // Move on hover
-//   links.forEach(link => {
-//     link.addEventListener("mouseenter", () => positionTo(link));
-//     link.addEventListener("click", () => { activeLink = link; }); // keep active if staying on page
-//   });
-
-//   // Snap back to active link when leaving the nav (don't hide)
-//   nav.addEventListener("mouseleave", () => positionTo(activeLink));
-
-//   // Recalculate on resize
-//   window.addEventListener("resize", () => positionTo(activeLink));
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll("#nav-circle a");
   const highlight = document.getElementById("highlight");
@@ -175,13 +140,10 @@ const cards = document.querySelectorAll('.core-value');
 
 cards.forEach(card => {
   card.addEventListener('mouseenter', () => {
-    // Make hovered card slightly bigger
-    card.style.transform = 'scale(1.03, 1.15)'; // 10% wider, 30px taller approx
-
-    // Shrink the others slightly
+    card.style.transform = 'scale(1.13, 1.25)'; 
     cards.forEach(other => {
       if (other !== card) {
-        other.style.transform = 'scale(0.97, 0.95)'; // slightly smaller
+        other.style.transform = 'scale(0.87, 0.85)'; 
       }
     });
   });
