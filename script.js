@@ -140,19 +140,28 @@ const cards = document.querySelectorAll('.core-value');
 
 cards.forEach(card => {
   card.addEventListener('mouseenter', () => {
-    card.style.transform = 'scale(1.13, 1.25)'; 
     cards.forEach(other => {
-      if (other !== card) {
-        other.style.transform = 'scale(0.87, 0.85)'; 
+      // Pause pulse for everyone
+      other.style.animation = 'none';
+      
+      if (other === card) {
+        other.style.transform = 'scale(1.13, 1.25)';
+      } else {
+        other.style.transform = 'scale(0.87, 0.85)';
       }
     });
   });
 
   card.addEventListener('mouseleave', () => {
-    // Reset all cards
-    cards.forEach(c => c.style.transform = 'scale(1, 1)');
+    // Reset + restore pulse
+    cards.forEach(c => {
+      c.style.transform = 'scale(1, 1)';
+      c.style.animation = 'pulse 2s infinite';
+    });
   });
 });
+
+
 
 document.querySelectorAll('.slide-up, .slide-down, .slide-left, .slide-right')
   .forEach(el => observer.observe(el));

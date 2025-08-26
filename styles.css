@@ -350,7 +350,7 @@ body {
   overflow: hidden;
   position: relative;
   z-index: 100;
-  rotate: 3deg;;
+  /* rotate: 3deg; */
 }
 
 .features-marquee-inner {
@@ -401,7 +401,8 @@ body {
     min-width: 300px; /* adjust based on your design */
     flex-shrink: 0;
     margin-right: 10px;
-    rotate: -3deg;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    /* rotate: -3deg; */
 }
 
 .feature-text-1 {
@@ -539,7 +540,7 @@ body {
   z-index: 0;
   overflow: hidden;
   rotate: 3deg;
-  left: -25%;
+  left: -27%;
 }
 
 #founder {
@@ -821,7 +822,9 @@ body {
   text-align: center;
   color: #303030;
   position: relative;
+  animation: pulse 2s infinite;
   transition: all 0.3s ease; 
+  
 }
 
 .core-value:hover {
@@ -883,28 +886,10 @@ body {
   font-size: 30px;
 } 
 
-#side-bar {
-  width: 10%;
-  height: 100%;
-  background-color: #303030;
-  position: absolute;
-  top: 0%;
-  z-index: -1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.side-bar-text {
-  color: #E8D3A2;
-  font-family: "MyCustomFont", Helvetica;
-  rotate: -90deg;
-  font-size: 80px;
-  text-align: center;
-  width: 100%;
-  white-space: nowrap;
-  transform: translateX(-180%);
-  /* transition: opacity 0.4s ease-in-out; */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
 }
 
 .scroll-helper {
@@ -943,13 +928,26 @@ body {
 .student {
   top: 61%;
   width: 16%;
-  background-color: #303030;     
+  background-color: rgb(48, 44, 44);  
 }
 
 .driver {
   top: 97.6%;
   width: 16%;
+  background-color: rgb(87, 84, 84);     
+
+}
+
+.general-color {
   background-color: #303030;     
+}
+
+.student-color {
+  background-color: rgb(48, 44, 44);  
+}
+
+.driver-color {
+  background-color: rgb(87, 84, 84);     
 }
 
 .tab-text {
@@ -988,7 +986,6 @@ body {
 .feature-rectangles {
   width: 90%;
   height: calc(100vh - 170px);
-  background-color: #303030;
   color: white;
   font-size: 18px;
   display: flex;
@@ -997,7 +994,7 @@ body {
   overflow: hidden;
   position: relative;
   border-radius: 40px;
-  /* margin-left: -8%; */
+  box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.3);
 }
 
 .feature-rectangles .rectangle-3 {
