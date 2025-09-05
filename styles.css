@@ -1205,3 +1205,64 @@ body {
   line-height: 2;
   z-index: 200;
 }
+
+
+/* Future Goals */
+
+#future-header {
+  width: 100%;
+  text-align: center;
+  padding: 3% 20% 4%;
+}
+
+#future-header-1 {
+  font-size: 100px;
+  padding-bottom: 50px;
+  color: #4B2E83;
+}
+
+#future-header-2 {
+  font-size: 25px;
+}
+
+#roadmap {
+  width: 6%;
+  height: 2000px;
+  background-color: #4B2E83;
+  border-radius: 100px;
+  position: relative;
+  left: 47.5%;
+  margin-bottom: 5%;
+}
+
+.line {
+  position: relative;       
+  top: 0;                  
+  left: 50%;             
+  transform: translateX(-50%); 
+  z-index: 90;
+  width: 10px;
+  height: 100px;
+  background-color: white;
+  margin-top: 150px;
+}
+
+.top {
+  background-color: #4B2E83;
+  margin-top: 0px;
+}
+
+#car {
+  position: fixed;          
+  top: 58%;                 
+  left: 50%;                
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.future-box {
+  width: 200px;
+  height: 100px;
+  background-color: #303030;
+  z-index: 80;
+}
