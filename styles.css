@@ -19,11 +19,14 @@ body, html {
 .slide-left, .slide-right, .slide-up, .slide-down {
   opacity: 0;
   transition: all 0.6s ease-out;
+  will-change: transform, opacity;
+  position: relative; /* or absolute depending on layout */
 }
-.slide-left { transform: translateX(-100px); }
-.slide-right { transform: translateX(100px); }
-.slide-up { transform: translateY(100px); }
-.slide-down { transform: translateY(-100px); }
+
+.slide-right { transform: translateX(50px); }
+.slide-left { transform: translateX(-50px); }
+.slide-up { transform: translateY(50px); }
+.slide-down { transform: translateY(-50px); }
 
 .slide-left.active,
 .slide-right.active,
@@ -1212,27 +1215,87 @@ body {
 #future-header {
   width: 100%;
   text-align: center;
-  padding: 3% 20% 4%;
+  padding: 2% 20% 4%;
 }
 
 #future-header-1 {
   font-size: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 35px;
   color: #4B2E83;
 }
 
 #future-header-2 {
   font-size: 25px;
+  margin-bottom: -90px;
+}
+
+.future-section {
+  display: flex;
+  justify-content: center;  
+  align-items: flex-start;   
+  gap: 5%;                  
+  margin: 3% auto 3%;
+}
+
+.left-boxes,
+.right-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 400px; 
+}
+
+.right-boxes {
+  position: relative;
+  top: 250px;
+}
+
+.future-box {
+  width: 600px;
+  height: 200px;
+  background-color: #303030;
+  z-index: 80;
+  border-radius: 20px;
+  transition: background-color 0.4s ease; 
+  color: #E8D3A2;
+}
+
+.future-box.is-centered {
+  width: 600px;
+  height: 400px;
+  background-color: #E8D3A2;
+  color: #303030;
+}
+
+.goals-header-text {
+  text-align: center;
+  padding: 12%;
+  font-size: 50px;
+}
+
+.future-box.is-centered .goals-header-text {
+  padding-top: 7%;
+  padding-bottom: 3%;
+}
+
+.goals-text {
+  display: none;
+  text-align: center;
+  padding: 3% 8%;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #303030;
+}
+
+.future-box.is-centered .goals-text {
+  display: block;
 }
 
 #roadmap {
   width: 6%;
-  height: 2000px;
+  height: 1870px;
   background-color: #4B2E83;
   border-radius: 100px;
   position: relative;
-  left: 47.5%;
-  margin-bottom: 5%;
 }
 
 .line {
@@ -1254,15 +1317,8 @@ body {
 
 #car {
   position: fixed;          
-  top: 58%;                 
-  left: 50%;                
+  top: 49%;                 
+  left: 49.5%;                
   transform: translate(-50%, -50%);
   z-index: 100;
-}
-
-.future-box {
-  width: 200px;
-  height: 100px;
-  background-color: #303030;
-  z-index: 80;
 }

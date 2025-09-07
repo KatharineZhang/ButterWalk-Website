@@ -1,3 +1,34 @@
+(function () {
+  const BAND = 50; // half-height of the band
+  const boxes = document.querySelectorAll(".future-box");
+  if (!boxes.length) return;
+
+  function makeObserver() {
+    const shrink = Math.max(0, Math.floor(window.innerHeight / 2 - BAND));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle("is-centered", entry.isIntersecting);
+      });
+    }, {
+      root: null,
+      // shrink top & bottom so only a center stripe of height 2*BAND remains
+      rootMargin: `-${shrink}px 0px -${shrink}px 0px`,
+      threshold: 0 // fires as soon as it touches the stripe
+    });
+
+    boxes.forEach(b => io.observe(b));
+    return io;
+  }
+
+  let observer = makeObserver();
+
+  window.addEventListener("resize", () => {
+    if (observer && observer.disconnect) observer.disconnect();
+    observer = makeObserver();
+  });
+})();
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll("#nav-circle a");
   const highlight = document.getElementById("highlight");
